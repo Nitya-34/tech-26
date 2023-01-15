@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+bool check_prime(int n){
+    int i=2;
+    while(i<n){
+        if(n%i==0){
+            return false;
+            break;
+        }    
+        i++;    
+    }
+    if(i==n)
+      return true;
+    
+}
+int main(){
+    int low, high;
+    cin >> low >> high;
+    for(int j=low ; j<=high ; j++){
+        if (check_prime(j)){
+            cout<<j<<endl;
+        } 
+    }
+    
+
+ return 0;
+}
